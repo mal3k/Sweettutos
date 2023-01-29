@@ -18,23 +18,6 @@ class API {
 }
 
 extension API {
-//    func getPosts(completion: @escaping (Result<[Post], HTTPError>) -> Void) {
-//        var urlComponents: URLComponents = URLComponents()
-//        urlComponents.path = Routes.posts.callAsFunction()
-//        urlComponents.scheme = apiConfig.scheme
-//        urlComponents.host = apiConfig.host
-//
-//        guard let safeURL = urlComponents.url else {
-//            completion(.failure(.invalidUrl))
-//            return
-//        }
-//        var request: URLRequest = URLRequest(url: safeURL)
-//        request.httpMethod = HTTPMethod.GET.callAsFunction()
-//        apiFetcher.request(request: request) { result in
-//            completion(result)
-//        }
-//    }
-
     func getPosts() async throws -> [Post] {
         var urlComponents: URLComponents = URLComponents()
         urlComponents.path = Routes.posts.callAsFunction()
